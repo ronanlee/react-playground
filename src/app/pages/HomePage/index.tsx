@@ -5,12 +5,21 @@ import { Masthead } from './Masthead';
 import { Features } from './Features';
 import { PageWrapper } from 'app/components/PageWrapper';
 
-
-
 export function HomePage() {
   return (
     <>
-      <h1>hello world</h1>
+      <Helmet>
+        <title>Home Page</title>
+        <meta
+          name="description"
+          content="A React Boilerplate application homepage"
+        />
+      </Helmet>
+      <NavBar />
+      <PageWrapper>
+        <Masthead />
+        <Features />
+      </PageWrapper>
     </>
   );
 }
